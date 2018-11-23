@@ -1,0 +1,26 @@
+{
+  "name": "wood-elasticsearch",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlego/wood-elasticsearch.git"
+  },
+  "keywords": [
+    "wood-elasticsearch"
+  ],
+  "author": "jlego",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jlego/wood-elasticsearch/issues"
+  },
+  "homepage": "https://github.com/jlego/wood-elasticsearch#readme",
+  "dependencies": {
+    "elasticsearch": "^15.2.0",
+    "wood-util": "^1.0.7"
+  }
+}
