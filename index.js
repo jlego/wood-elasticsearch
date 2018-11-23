@@ -36,7 +36,11 @@ module.exports = (app = {}, config = {}) => {
     if(res.err) throw Util.error(res.err);
     let list = [], total = 0, totalpage = 0;
     if(res.data){
-      list = res.data.hits.hits.map(item => item._source);
+      list = res.data.hits.hits.map(item => {
+        let newItem = item._source;
+        if(item._id) newItem._id = item._id;
+        return newItem;
+      });
       total = res.data.hits.total;
       totalpage = Math.ceil(res.data.hits.total / limit);
     }
