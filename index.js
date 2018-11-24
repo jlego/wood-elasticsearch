@@ -4,7 +4,6 @@
  * by jlego on 2018-11-23
  */
 const elasticsearch = require('elasticsearch');
-const { Util } = require('wood-util')();
 
 module.exports = (app = {}, config = {}) => {
   let client = new elasticsearch.Client(config);
@@ -31,9 +30,9 @@ module.exports = (app = {}, config = {}) => {
         }
       }
     };
-    
-    const res = await Util.catchErr(client.search(searchParams));
-    if(res.err) throw Util.error(res.err);
+
+    const res = await WOOD.catchErr(client.search(searchParams));
+    if(res.err) throw WOOD.error(res.err);
     let list = [], total = 0, totalpage = 0;
     if(res.data){
       list = res.data.hits.hits.map(item => {
