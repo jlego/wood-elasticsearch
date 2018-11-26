@@ -31,8 +31,8 @@ module.exports = (app = {}, config = {}) => {
       }
     };
 
-    const res = await WOOD.catchErr(client.search(searchParams));
-    if(res.err) throw WOOD.error(res.err);
+    const res = await app.catchErr(client.search(searchParams));
+    if(res.err) throw app.error(res.err);
     let list = [], total = 0, totalpage = 0;
     if(res.data){
       list = res.data.hits.hits.map(item => {
