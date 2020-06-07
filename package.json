@@ -1,6 +1,6 @@
 {
   "name": "wood-elasticsearch",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -21,6 +21,6 @@
   "homepage": "https://github.com/jlego/wood-elasticsearch#readme",
   "dependencies": {
     "elasticsearch": "^15.2.0",
-    "wood-util": "^1.0.7"
+    "wood-util": "^1.0.17"
   }
 }
